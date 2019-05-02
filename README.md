@@ -32,3 +32,38 @@
   * not_available
 * timeframe_for_order (TEXT)
 * price
+
+
+# Creating db
+
+```
+CREATE DATABASE aleeldb;
+CREATE USER aleeluser WITH PASSWORD '123';
+ALTER ROLE aleeluser SET client_encoding TO 'utf8';
+ALTER ROLE aleeluser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE aleeluser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE aleeldb TO aleeluser;
+\q
+```
+
+# Dev settings
+
+```
+from .settings import *
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'aleeldb',
+        'USER': 'aleeluser',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+DEVELOPMENT_APPS = ()
+
+INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS + DEVELOPMENT_APPS
+
+```
