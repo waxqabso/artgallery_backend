@@ -1,10 +1,12 @@
 from django.db import models
 
+from utils.models import Timestamped
+
 # Create your models here.
 
 MEDIA_UPLOAD_PATH = './media'
 
-class Art(models.Model):
+class Art(Timestamped):
 
     class Availability:
         AVAILABLE_NOW = 'AN'

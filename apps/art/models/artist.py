@@ -2,9 +2,11 @@ from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
 
+from utils.models import Timestamped
+
 MEDIA_UPLOAD_PATH = './media/artist'
 
-class Artist(models.Model):
+class Artist(Timestamped):
 
     name =  models.CharField(max_length = 50)
     email_address = models.EmailField(max_length = 254)

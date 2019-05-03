@@ -50,6 +50,7 @@ EXTERNAL_APPS = (
 
 INTERNAL_APPS = (
     "art",
+    "utils",
 )
 
 MIDDLEWARE = [
