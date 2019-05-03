@@ -36,6 +36,8 @@
 
 # Creating db
 
+`sudo -i -u postgrs psql`
+
 ```
 CREATE DATABASE aleeldb;
 CREATE USER aleeluser WITH PASSWORD '123';
