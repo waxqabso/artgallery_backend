@@ -9,7 +9,7 @@ class ArtSerializer(serializers.HyperlinkedModelSerializer):
 <<<<<<< HEAD
         fields = ('name', 'description', 'created', 'rating', 'image','timeframe_for_order', 'price', 'availability')
 =======
-        fields = ('name', 'description', 'created', 'rating', 'image','timeframe_for_order', 'price')
+        fields = ('name', 'description', 'created', 'rating', 'image','timeframe_for_order', 'price', 'availability')
 
 class ArtistSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
