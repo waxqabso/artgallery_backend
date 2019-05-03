@@ -69,3 +69,7 @@ DEVELOPMENT_APPS = ()
 INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS + DEVELOPMENT_APPS
 
 ```
+
+
+## Comunity chat on discord
+[waxqabso](https://discord.gg/sU6ZUwT)
