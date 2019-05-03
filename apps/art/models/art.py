@@ -5,6 +5,7 @@ from utils.models import Timestamped
 # Create your models here.
 
 MEDIA_UPLOAD_PATH = './media'
+ART_UPLOAD_PATH = MEDIA_UPLOAD_PATH+'/art'
 
 class Art(Timestamped):
 
@@ -25,9 +26,9 @@ class Art(Timestamped):
     )
 
     name = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
+    description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to=MEDIA_UPLOAD_PATH)
+    image = models.ImageField(upload_to=ART_UPLOAD_PATH, blank=True)
     rating = models.IntegerField(default=0)
     #artist_id = models.ForeignKey(Artist, on_delete=models.CASCADE)
     timeframe_for_order = models.CharField(max_length=200, blank=True)
