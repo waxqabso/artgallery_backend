@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
                 ('availability', models.CharField(choices=[('NA', 'Not Available'), ('AN', 'Available Now'), ('AL', 'Available for Order')], default='AN', max_length=2)),
                 ('name', models.CharField(max_length=200)),
                 ('description', models.CharField(max_length=200)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('image', models.ImageField(upload_to='')),
                 ('rating', models.IntegerField(default=0)),
                 ('timeframe_for_order', models.CharField(max_length=200)),

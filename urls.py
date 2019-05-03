@@ -22,7 +22,7 @@ router = routers.DefaultRouter()
 router.register(r'art', views.ArtViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('rest-auth/', include('rest_auth.urls'))
 ]

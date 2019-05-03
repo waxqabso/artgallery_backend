@@ -29,6 +29,6 @@ class Art(Timestamped):
     description = models.TextField()
     image = models.ImageField(upload_to=ART_UPLOAD_PATH, blank=True)
     rating = models.IntegerField(default=0)
-    artist_id = models.ForeignKey('Artist', on_delete=models.CASCADE)
+    artist_id = models.ForeignKey('Artist', on_delete=models.CASCADE, blank=True, null=True)
     timeframe_for_order = models.CharField(max_length=200, blank=True)
     price = models.DecimalField(decimal_places=2, max_digits=15)
