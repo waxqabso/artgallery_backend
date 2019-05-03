@@ -20,6 +20,7 @@ from art import views
 
 router = routers.DefaultRouter()
 router.register(r'art', views.ArtViewSet)
+router.register(r'artist', views.ArtistViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
