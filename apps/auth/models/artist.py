@@ -5,9 +5,9 @@ class Artist(AbstractUser):
     class Meta:
         db_table = 'auth_user'
         name =  models.CharField(max_length = 50)
-        email_address = models.CharField(max_length = 50)
+        email_address = models.EmailField(max_length = 254)
         password = models.CharField(max_length = 255)
-        phone_number = models.CharField(max_length = 50)
+        phone_number = models.PhoneNumberField()
         address =  models.CharField(max_length = 50)
         biography = models.CharField(max_length = 255)
         profile_picture_path = models.ImageField()
